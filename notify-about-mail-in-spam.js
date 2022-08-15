@@ -1,6 +1,6 @@
 /** Send spam summaries to another user. Version 1.0.0 / 2017-01-21 */
 function sendSpamSummary() {
-  var target_email = "jhh@sendanor.com";
+  var target_email = "user@example.com";
   var active_email = Session.getActiveUser().getEmail();
  
   if (target_email === active_email) {
@@ -39,7 +39,7 @@ function sendSpamSummary() {
   body += subjects.join('\n');
   body += "\n";
   body += "-- \n";
-  body += "Sendanor's Google App Script\n";
+  body += "HG's Google App Script\n";
   
   GmailApp.sendEmail(target_email, "New spam in " + active_email, body);
   Logger.log("Sent summary to " + target_email);
